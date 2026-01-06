@@ -40,10 +40,15 @@ const PRICING_TIER_OPTIONS: Array<{ value: QueryState["pricingTier"]; label: str
 function getModelOptions(pricing: PricingSnapshot, category: QueryState["category"]) {
   if (category === "text") {
     const all = Object.keys(pricing.textTokens.models);
-    // Keep original insertion order but elevate gpt-5.2* to the top for faster selection.
-    const top = all.filter((m) => m.startsWith("gpt-5.2"));
-    const rest = all.filter((m) => !m.startsWith("gpt-5.2"));
-    return [...top, ...rest];
+    // Keep insertion order, but pin the most common seller defaults at the top.
+    const pinnedOrder = ["gpt-5.2", "gpt-5.2-pro", "gpt-5.1"];
+    const pinnedPresent = pinnedOrder.filter((m) => all.includes(m));
+    const pinned = new Set(pinnedPresent);
+
+    // After pinned, keep other gpt-5.2* models near the top.
+    const other52 = all.filter((m) => !pinned.has(m) && m.startsWith("gpt-5.2"));
+    const rest = all.filter((m) => !pinned.has(m) && !m.startsWith("gpt-5.2"));
+    return [...pinnedPresent, ...other52, ...rest];
   }
   if (category === "image_tokens") return Object.keys(pricing.imageTokens.models);
   if (category === "audio_tokens") return Object.keys(pricing.audioTokens.models);

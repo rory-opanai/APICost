@@ -60,5 +60,5 @@ export const DEFAULT_STATE: QueryState = queryStateSchema.parse({
   v: 1,
   category: "text",
   mode: "message",
-  modelsSelected: ["gpt-5-mini"]
+  modelsSelected: ["gpt-5.2", "gpt-5.2-pro", "gpt-5.1"]
 });
