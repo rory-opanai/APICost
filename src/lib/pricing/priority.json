@@ -1,51 +1,197 @@
 {
   "meta": {
-    "lastUpdated": "2026-01-06",
-    "sourceUrl": "https://platform.openai.com/docs/pricing?latest-pricing=priority",
-    "notes": "This file is a versioned snapshot used by the estimator. Update prices from the sourceUrl and bump lastUpdated. Reasoning tokens are billed as output tokens."
+    "lastUpdated": "2026-04-28",
+    "sourceUrl": "https://developers.openai.com/api/docs/pricing",
+    "notes": "Versioned pricing snapshot from the official OpenAI API pricing docs. Reasoning tokens are billed as output tokens. GPT-5.5 and GPT-5.4 family defaults use short-context (<272K) rates; -long-context keys capture published long-context rates. Regional/data residency uplift is not included."
   },
   "textTokens": {
     "unit": "USD per 1M tokens",
     "models": {
-      "gpt-5.2": { "inputPer1M": 3.5, "cachedInputPer1M": 0.35, "outputPer1M": 28 },
-      "gpt-5.1": { "inputPer1M": 2.5, "cachedInputPer1M": 0.25, "outputPer1M": 20 },
-      "gpt-5": { "inputPer1M": 2.5, "cachedInputPer1M": 0.25, "outputPer1M": 20 },
-      "gpt-5-mini": { "inputPer1M": 0.45, "cachedInputPer1M": 0.045, "outputPer1M": 3.6 },
-      "gpt-5.1-codex-max": { "inputPer1M": 2.5, "cachedInputPer1M": 0.25, "outputPer1M": 20 },
-      "gpt-5.1-codex": { "inputPer1M": 2.5, "cachedInputPer1M": 0.25, "outputPer1M": 20 },
-      "gpt-5-codex": { "inputPer1M": 2.5, "cachedInputPer1M": 0.25, "outputPer1M": 20 },
-      "gpt-4.1": { "inputPer1M": 3.5, "cachedInputPer1M": 0.875, "outputPer1M": 14 },
-      "gpt-4.1-mini": { "inputPer1M": 0.7, "cachedInputPer1M": 0.175, "outputPer1M": 2.8 },
-      "gpt-4.1-nano": { "inputPer1M": 0.2, "cachedInputPer1M": 0.05, "outputPer1M": 0.8 },
-      "gpt-4o": { "inputPer1M": 4.25, "cachedInputPer1M": 2.125, "outputPer1M": 17 },
-      "gpt-4o-2024-05-13": { "inputPer1M": 8.75, "cachedInputPer1M": null, "outputPer1M": 26.25 },
-      "gpt-4o-mini": { "inputPer1M": 0.25, "cachedInputPer1M": 0.125, "outputPer1M": 1 },
-      "o3": { "inputPer1M": 3.5, "cachedInputPer1M": 0.875, "outputPer1M": 14 },
-      "o4-mini": { "inputPer1M": 2, "cachedInputPer1M": 0.5, "outputPer1M": 8 }
+      "gpt-5.5": {
+        "inputPer1M": 12.5,
+        "cachedInputPer1M": 1.25,
+        "outputPer1M": 75
+      },
+      "gpt-5.4": {
+        "inputPer1M": 5,
+        "cachedInputPer1M": 0.5,
+        "outputPer1M": 30
+      },
+      "gpt-5.4-mini": {
+        "inputPer1M": 1.5,
+        "cachedInputPer1M": 0.15,
+        "outputPer1M": 9
+      },
+      "gpt-5.2": {
+        "inputPer1M": 3.5,
+        "cachedInputPer1M": 0.35,
+        "outputPer1M": 28
+      },
+      "gpt-5.1": {
+        "inputPer1M": 2.5,
+        "cachedInputPer1M": 0.25,
+        "outputPer1M": 20
+      },
+      "gpt-5": {
+        "inputPer1M": 2.5,
+        "cachedInputPer1M": 0.25,
+        "outputPer1M": 20
+      },
+      "gpt-5-mini": {
+        "inputPer1M": 0.45,
+        "cachedInputPer1M": 0.045,
+        "outputPer1M": 3.6
+      },
+      "gpt-5.1-codex-max": {
+        "inputPer1M": 2.5,
+        "cachedInputPer1M": 0.25,
+        "outputPer1M": 20
+      },
+      "gpt-5.1-codex": {
+        "inputPer1M": 2.5,
+        "cachedInputPer1M": 0.25,
+        "outputPer1M": 20
+      },
+      "gpt-5-codex": {
+        "inputPer1M": 2.5,
+        "cachedInputPer1M": 0.25,
+        "outputPer1M": 20
+      },
+      "gpt-4.1": {
+        "inputPer1M": 3.5,
+        "cachedInputPer1M": 0.875,
+        "outputPer1M": 14
+      },
+      "gpt-4.1-mini": {
+        "inputPer1M": 0.7,
+        "cachedInputPer1M": 0.175,
+        "outputPer1M": 2.8
+      },
+      "gpt-4.1-nano": {
+        "inputPer1M": 0.2,
+        "cachedInputPer1M": 0.05,
+        "outputPer1M": 0.8
+      },
+      "gpt-4o": {
+        "inputPer1M": 4.25,
+        "cachedInputPer1M": 2.125,
+        "outputPer1M": 17
+      },
+      "gpt-4o-2024-05-13": {
+        "inputPer1M": 8.75,
+        "cachedInputPer1M": null,
+        "outputPer1M": 26.25
+      },
+      "gpt-4o-mini": {
+        "inputPer1M": 0.25,
+        "cachedInputPer1M": 0.125,
+        "outputPer1M": 1
+      },
+      "o3": {
+        "inputPer1M": 3.5,
+        "cachedInputPer1M": 0.875,
+        "outputPer1M": 14
+      },
+      "o4-mini": {
+        "inputPer1M": 2,
+        "cachedInputPer1M": 0.5,
+        "outputPer1M": 8
+      }
     }
   },
   "imageTokens": {
     "unit": "USD per 1M tokens",
     "models": {
-      "gpt-image-1.5": { "inputPer1M": 8, "cachedInputPer1M": 2, "outputPer1M": 32 },
-      "chatgpt-image-latest": { "inputPer1M": 8, "cachedInputPer1M": 2, "outputPer1M": 32 },
-      "gpt-image-1": { "inputPer1M": 10, "cachedInputPer1M": 2.5, "outputPer1M": 40 },
-      "gpt-image-1-mini": { "inputPer1M": 2.5, "cachedInputPer1M": 0.25, "outputPer1M": 8 },
-      "gpt-realtime": { "inputPer1M": 5, "cachedInputPer1M": 0.5, "outputPer1M": 0 },
-      "gpt-realtime-mini": { "inputPer1M": 0.8, "cachedInputPer1M": 0.08, "outputPer1M": 0 }
+      "gpt-image-2": {
+        "inputPer1M": 8,
+        "cachedInputPer1M": 2,
+        "outputPer1M": 30
+      },
+      "gpt-image-1.5": {
+        "inputPer1M": 8,
+        "cachedInputPer1M": 2,
+        "outputPer1M": 32
+      },
+      "chatgpt-image-latest": {
+        "inputPer1M": 8,
+        "cachedInputPer1M": 2,
+        "outputPer1M": 32
+      },
+      "gpt-image-1-mini": {
+        "inputPer1M": 2.5,
+        "cachedInputPer1M": 0.25,
+        "outputPer1M": 8
+      },
+      "gpt-image-1": {
+        "inputPer1M": 10,
+        "cachedInputPer1M": 2.5,
+        "outputPer1M": 40
+      },
+      "gpt-realtime-1.5": {
+        "inputPer1M": 5,
+        "cachedInputPer1M": 0.5,
+        "outputPer1M": null
+      },
+      "gpt-realtime": {
+        "inputPer1M": 5,
+        "cachedInputPer1M": 0.5,
+        "outputPer1M": null
+      },
+      "gpt-realtime-mini": {
+        "inputPer1M": 0.8,
+        "cachedInputPer1M": 0.08,
+        "outputPer1M": null
+      }
     }
   },
   "audioTokens": {
     "unit": "USD per 1M tokens",
     "models": {
-      "gpt-realtime": { "inputPer1M": 32, "cachedInputPer1M": 0.4, "outputPer1M": 64 },
-      "gpt-realtime-mini": { "inputPer1M": 10, "cachedInputPer1M": 0.3, "outputPer1M": 20 },
-      "gpt-4o-realtime-preview": { "inputPer1M": 40, "cachedInputPer1M": 2.5, "outputPer1M": 80 },
-      "gpt-4o-mini-realtime-preview": { "inputPer1M": 10, "cachedInputPer1M": 0.3, "outputPer1M": 20 },
-      "gpt-audio": { "inputPer1M": 32, "cachedInputPer1M": null, "outputPer1M": 64 },
-      "gpt-audio-mini": { "inputPer1M": 10, "cachedInputPer1M": null, "outputPer1M": 20 },
-      "gpt-4o-audio-preview": { "inputPer1M": 40, "cachedInputPer1M": null, "outputPer1M": 80 },
-      "gpt-4o-mini-audio-preview": { "inputPer1M": 10, "cachedInputPer1M": null, "outputPer1M": 20 }
+      "gpt-realtime-1.5": {
+        "inputPer1M": 32,
+        "cachedInputPer1M": 0.4,
+        "outputPer1M": 64
+      },
+      "gpt-realtime": {
+        "inputPer1M": 32,
+        "cachedInputPer1M": 0.4,
+        "outputPer1M": 64
+      },
+      "gpt-realtime-mini": {
+        "inputPer1M": 10,
+        "cachedInputPer1M": 0.3,
+        "outputPer1M": 20
+      },
+      "gpt-4o-realtime-preview": {
+        "inputPer1M": 40,
+        "cachedInputPer1M": 2.5,
+        "outputPer1M": 80
+      },
+      "gpt-4o-mini-realtime-preview": {
+        "inputPer1M": 10,
+        "cachedInputPer1M": 0.3,
+        "outputPer1M": 20
+      },
+      "gpt-audio": {
+        "inputPer1M": 32,
+        "cachedInputPer1M": null,
+        "outputPer1M": 64
+      },
+      "gpt-audio-mini": {
+        "inputPer1M": 10,
+        "cachedInputPer1M": null,
+        "outputPer1M": 20
+      },
+      "gpt-4o-audio-preview": {
+        "inputPer1M": 40,
+        "cachedInputPer1M": null,
+        "outputPer1M": 80
+      },
+      "gpt-4o-mini-audio-preview": {
+        "inputPer1M": 10,
+        "cachedInputPer1M": null,
+        "outputPer1M": 20
+      }
     }
   },
   "video": {
@@ -62,7 +208,9 @@
           "720x1280": 0.3,
           "1280x720": 0.3,
           "1024x1792": 0.5,
-          "1792x1024": 0.5
+          "1792x1024": 0.5,
+          "1080x1920": 0.7,
+          "1920x1080": 0.7
         }
       }
     }
@@ -70,43 +218,152 @@
   "imageGeneration": {
     "unit": "USD per image",
     "models": {
+      "gpt-image-2": {
+        "qualities": {
+          "low": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "medium": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "high": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          }
+        }
+      },
       "gpt-image-1.5": {
         "qualities": {
-          "low": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null },
-          "medium": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null },
-          "high": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null }
+          "low": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "medium": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "high": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          }
         }
       },
       "chatgpt-image-latest": {
         "qualities": {
-          "low": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null },
-          "medium": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null },
-          "high": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null }
+          "low": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "medium": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "high": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          }
         }
       },
       "gpt-image-1": {
         "qualities": {
-          "low": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null },
-          "medium": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null },
-          "high": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null }
+          "low": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "medium": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "high": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          }
         }
       },
       "gpt-image-1-mini": {
         "qualities": {
-          "low": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null },
-          "medium": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null },
-          "high": { "256x256": null, "512x512": null, "1024x1024": null, "1024x1792": null, "1792x1024": null }
+          "low": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "medium": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          },
+          "high": {
+            "256x256": null,
+            "512x512": null,
+            "1024x1024": null,
+            "1024x1792": null,
+            "1792x1024": null
+          }
         }
       },
       "dall-e-3": {
         "qualities": {
-          "standard": { "1024x1024": 0.04, "1024x1792": 0.08, "1792x1024": 0.08 },
-          "hd": { "1024x1024": 0.08, "1024x1792": 0.12, "1792x1024": 0.12 }
+          "standard": {
+            "1024x1024": 0.04,
+            "1024x1792": 0.08,
+            "1792x1024": 0.08
+          },
+          "hd": {
+            "1024x1024": 0.08,
+            "1024x1792": 0.12,
+            "1792x1024": 0.12
+          }
         }
       },
       "dall-e-2": {
         "qualities": {
-          "standard": { "256x256": 0.016, "512x512": 0.018, "1024x1024": 0.02 }
+          "standard": {
+            "256x256": 0.016,
+            "512x512": 0.018,
+            "1024x1024": 0.02
+          }
         }
       }
     }

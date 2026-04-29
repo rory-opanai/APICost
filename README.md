@@ -41,16 +41,13 @@ Pricing is versioned and loaded from:
 
 To update:
 
-1. Open the Standard pricing source:
-   - https://platform.openai.com/docs/pricing?latest-pricing=standard
-2. Update the relevant entries in `src/lib/pricing/standard.json`.
+1. Open the official pricing source:
+   - https://developers.openai.com/api/docs/pricing
+2. Update the relevant entries in `src/lib/pricing/{standard,batch,flex,priority}.json`.
 3. Bump `meta.lastUpdated` (ISO `YYYY-MM-DD`).
+4. Run `npm run test && npm run lint && npm run build`.
 
-To update other tiers, use:
-
-- https://platform.openai.com/docs/pricing?latest-pricing=priority
-- https://platform.openai.com/docs/pricing?latest-pricing=flex
-- https://platform.openai.com/docs/pricing?latest-pricing=batch
+The docs publish separate short-context and long-context rates for some GPT-5.5/GPT-5.4 family models. Keep the base model key on the short-context rate and use a `-long-context` key only when the source publishes a separate long-context rate.
 
 If a price is `null`, the UI will show “—” and may prompt for a custom override (per-image mode).
 
